@@ -14,7 +14,7 @@ Install
 In your Rails app, add this line to your `Gemfile`:
 
 ```rb
-gem "handle_invalid_percent_encoding_requests"
+gem "rack-easou"
 ```
 
 Then type `bundle`.

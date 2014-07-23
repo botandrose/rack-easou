@@ -1,7 +1,6 @@
 # Via https://gist.github.com/bf4/d26259acfa29f3b9882b#file-exception_app-rb
 
-module HandleInvalidPercentEncodingRequests
-
+module Rack::Easou
   class Middleware
     def initialize(app, stdout=STDOUT)
       @app = app

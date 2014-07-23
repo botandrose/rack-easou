@@ -1,9 +1,8 @@
 require "rack/utf8_sanitizer"
 
-module HandleInvalidPercentEncodingRequests
-
+module Rack::Easou
   class Engine < Rails::Engine
-    initializer "handle_invalid_percent_encoding_requests.add_middleware" do |app|
+    initializer "rack-easou.add_middleware" do |app|
       # Via http://stackoverflow.com/a/24727310/311657
       # NOTE: These must be in this order relative to each other.
       # The middleware just raises for encoding errors it doesn't cover,
@@ -12,5 +11,4 @@ module HandleInvalidPercentEncodingRequests
       app.middleware.insert 0, Rack::UTF8Sanitizer
     end
   end
-
 end
